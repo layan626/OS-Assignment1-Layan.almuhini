@@ -29,7 +29,13 @@ Example from my output:
 ```
 
 **Explanation of example:**
-[Explain what's happening in the output snippet you pasted]
+[In Round-Robin scheduling, if a process does not finish within its time quantum, it is moved back to the ready queue. 
+
+For example, from my program output:
+P1 is running...
+P1 did not finish and is added back to the ready queue.
+
+This shows that P1 used its time quantum but still has remaining time, so it was re-queued. This behavior ensures fairness because every process gets a chance to run, and no process is blocked for too long.]
 
 ---
 
