@@ -41,7 +41,7 @@ class Process implements Runnable {
     public Process(String name, int burstTime, int timeQuantum, int priority) {
         this.name = name;
         this.burstTime = burstTime;
-        this.priority = (int)(Math.random() * 5) + 1;
+        this.priority = priority;
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
 
@@ -59,6 +59,8 @@ public void addWaitingTime(long time) {
 
 public long getTotalWaitingTime() {
     return totalWaitingTime;
+}public long getLastQueueEnterTime() {
+    return lastQueueEnterTime;
 }
 
     // This method will be called when the thread for this process is started
@@ -221,7 +223,7 @@ public class SchedulerSimulation {
         for (int i = 1; i <= numProcesses; i++) {
             // Random burst time for each process between timeQuantum/2 and 3*timeQuantum
             int burstTime = timeQuantum/2 + random.nextInt(2 * timeQuantum + 1);
-            
+             int priority = (int)(Math.random() * 5) + 1;
             // Create a new process object with a unique name, burst time, and the defined time quantum
             Process process = new Process("P" + i, burstTime, timeQuantum, priority);
             allProcesses.add(process);
@@ -261,7 +263,7 @@ public class SchedulerSimulation {
             }
             System.out.println(Colors.BRIGHT_WHITE + "]" + Colors.RESET);
             System.out.println(Colors.BOLD + Colors.MAGENTA + "└" + "─".repeat(79) + Colors.RESET + "\n");
-            
+            Process currentProcess = processMap.get(currentThread);
             // Start the thread, which will run the process for one time quantum
             contextSwitches++;
             long waited = System.currentTimeMillis() - currentProcess.getLastQueueEnterTime();
