@@ -9,7 +9,7 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Write your answer here. Discuss specific concepts like thread creation, thread states, how threads execute concurrently, what surprised you, etc.]
+[I learned that multithreading allows multiple tasks to run at the same time within a single program. It improves performance by utilizing CPU resources more efficiently. In this assignment, I learned how to create threads using the Runnable interface and how to start them using Thread.start(). I also understood how threads can be controlled using methods like join() and sleep(). This helped me see how processes are scheduled and executed in a real system. Overall, it gave me a clear understanding of how concurrency works in Java.]
 
 ---
 
@@ -17,7 +17,7 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Describe the specific challenge. Was it understanding the code? Implementing a feature? Using Git? Explain what made it difficult and how it relates to the course concepts.]
+[The most challenging part of this assignment was implementing the waiting time feature. It required understanding how to track time accurately and where exactly to place the calculation in the code. I initially found it confusing to determine when a process starts waiting and when it stops. Also, working with System.currentTimeMillis() was new to me. However, after reviewing the logic and testing the code, I was able to implement it correctly. This challenge helped me improve my problem-solving skills.]
 
 ---
 
@@ -25,7 +25,7 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Describe your problem-solving approach. Did you read documentation? Ask for help? Debug systematically? What resources did you use? What strategies worked?]
+[I overcame the challenges by breaking the problem into smaller steps and focusing on one feature at a time. I carefully read the assignment instructions and reviewed the existing code to understand how it works. I also tested the program frequently after making changes to ensure everything was working correctly. When I got stuck, I searched for explanations and examples online. Step by step, I was able to solve each problem and complete the required features successfully.]
 
 ---
 
@@ -33,7 +33,7 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Give specific examples from real applications you use (web browsers, games, mobile apps, etc.). Explain why threads are useful in those scenarios. Connect to what you learned in this assignment.]
+[Multithreading can be used in many real-world applications such as web servers and gaming systems. In web servers, multiple user requests are handled simultaneously using threads, which improves performance and responsiveness. In gaming, threads are used to manage different tasks like graphics rendering, user input, and background processing at the same time. The Round-Robin scheduling algorithm ensures fairness by giving each process a time slice. This assignment helped me understand how such systems work in real life.]
 
 ---
 
